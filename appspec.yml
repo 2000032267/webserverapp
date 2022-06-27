@@ -1,8 +1,19 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
+ - source: /index.html
     destination: /var/www/html/
+    source: /userlogin.html
+    destination: /var/www/html/
+    source: /userreg.html
+    destination: /var/www/html/
+    source: /adminhome.html
+    destination: /var/www/html/
+    source: /adminlogin.html
+    destination: /var/www/html/
+    source: /contact.html
+    destination: /var/www/html/
+    
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
@@ -15,4 +26,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
-
